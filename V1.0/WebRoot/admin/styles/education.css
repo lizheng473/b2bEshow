@@ -1,0 +1,40 @@
+﻿@charset "utf-8";
+#education{padding:15px 0 0 0;}
+#education .daily{line-height:22px;border:1px solid #ddd;background:#fff;position:relative;}
+#education .daily .tit{ height:26px;line-height:30px;padding-left:22px;overflow:hidden;background:#eee url(../images/icon_book.gif) no-repeat 10px 8px;}
+#education .daily .more{position:absolute;top:30px;right:30px;}
+#education .daily .more a{text-decoration:underline;}
+#education .daily .cont{padding:10px 20px;}
+#education .sea{padding:10px 10px;border:1px solid #ddd;background:#f6f6f6;}
+#education .sea .botton{margin-top:1px;}
+#education .sea .botton2{margin-top:1px;}
+
+#education .subnav{height:20px;color:#ddd;border-bottom:1px solid #ddd;}
+#education .subnav a{padding:0 6px;height:18px;line-height:18px;float:left;display:block;}
+#education .subnav a:hover{color:#fff;background:#c00;}
+#education .subnav .on{color:#fff;background:#c00;}
+#education .top{padding:10px 0 5px 10px;color:#c00;font-weight:bold;border-bottom:1px solid #ddd; background:#eee;}
+#education ul{}
+#education li{line-height:20px;padding:8px;border-bottom:1px solid #eee;background:url(../images/icon_book.gif) no-repeat 8px 13px;}
+
+#educationView{padding:10px 0 0 0;}
+#educationView .title{height:34px;line-height:34px;padding:0 10px;font-size:14px;font-weight:bold;border-bottom:1px solid #eee;background:#f9f9f9;}
+#educationView .title a{font-size:12px;font-weight:normal;}
+#educationView .contxt{line-height:24px;padding:10px;font-size:14px;}
+#educationView .bot{padding:0 20px;color:#666;}
+#educationView .bot a{text-decoration:underline;}
+
+#educationAc{padding:15px 0 0 0;}
+#educationAc .catac{width:600px;padding:0 0 15px 0;}
+#educationAc .catac .top{height:28px;line-height:28px;padding:0 8px;color:#a00;text-align:center;font-weight:bold;border-top:1px solid #eee;background:#f6f6f6;}
+#educationAc .catac .top .r{font-weight:normal;}
+#educationAc .catac .top .r a{text-decoration:underline;}
+#educationAc .catac li{height:26px;line-height:26px;padding-left:15px;border-bottom:1px solid #eee;background:url(../images/pix_04.gif) no-repeat 0 -73px;}
+
+#educationAdd{padding:15px 0 0 10px;}
+#educationAdd .title{height:30px;line-height:30px;font-size:14px;font-weight:bold;margin-bottom:10px;border-bottom:1px solid #eee;}
+#educationAdd .title .r{font-weight:normal;font-size:12px;}
+
+.tbg{color:#666;border-bottom:1px solid #ddd;background:#eee;}
+td{line-height:30px;text-align:center;border-bottom:1px solid #eee;}
+td a{text-decoration:underline;}

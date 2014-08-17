@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 3.0//EN"
+    "http://tuckey.org/res/dtds/urlrewrite3.0.dtd">
+
+<urlrewrite>
+
+	<rule>
+		<from>^/admin/?$</from>
+		<to type="forward">/admin/index.html</to>
+	</rule>
+	
+	<rule>
+		<from>^/admin/([A-Za-z0-9]+)/?$</from>
+		<to type="forward">/admin/$1/index.html</to>
+	</rule>
+	
+	<rule>
+		<from>^/admin/([A-Za-z0-9]+)/([A-Za-z0-9]+)/?$</from>
+		<to type="forward">/admin/$1/$2.html</to>
+	</rule>
+	
+	<rule>
+		<from>^/admin/([A-Za-z0-9]+)/([A-Za-z]+)/([A-Za-z0-9]+)/?$</from>
+		<to type="forward">/admin/$1/$2.html?id=$3</to>
+	</rule>
+
+	<rule>
+		<from>^/admin/([A-Za-z0-9]+)/([A-Za-z]+)/([A-Za-z0-9]+)/?$</from>
+		<to type="forward">/admin/$1/$2.html?id=$3</to>
+	</rule>
+	
+	<rule>
+		<from>^/info/([A-Za-z0-9]+)/?$</from>
+		<to type="forward">/info/browse.jsp?info.url=$1</to>
+	</rule>
+
+	<rule>
+		<from>^/([A-Za-z0-9]+)/?$</from>
+		<to type="forward">/$1.jsp</to>
+	</rule>
+	
+	<rule>
+		<from>^/([A-Za-z]+)/([A-Za-z]+)/?$</from>
+		<to type="forward">/$1/$2.jsp</to>
+	</rule>
+	
+	<rule>
+		<from>^/user/([A-Za-z]+)/([A-Za-z0-9]+)/?$</from>
+		<to type="forward">/user/$1?username=$2</to>
+	</rule>
+
+	<rule>
+		<from>^/([A-Za-z0-9]+)/([A-Za-z]+)/([A-Za-z0-9]+)/?$</from>
+		<to type="forward">/$1/$2.jsp?id=$3</to>
+	</rule>
+	
+	<!-- Override default validation.js from WebWork -->
+	<rule>
+		<from>^/struts/css_xhtml/validation.js$</from>
+		<to type="forward">/template/css_xhtml/validation.js</to>
+	</rule>
+
+	<!-- The following fixes a bug in XFire:        -->
+	<!-- http://jira.codehaus.org/browse/XFIRE-1089 -->
+	<rule>
+		<from>^//services/(.*)$</from>
+		<to type="forward">/services/$1</to>
+	</rule>
+</urlrewrite>
+

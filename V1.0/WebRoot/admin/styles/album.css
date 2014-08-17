@@ -1,0 +1,171 @@
+﻿@charset "utf-8";
+#celebrity{padding:0 0 0 10px;}
+#celebrity .subnav{padding:5px 0 5px 10px;margin:10px 10px 0 0;color:#ddd;font-weight:bold;background:#f1f1f1;}
+#celebrity .subnav strong{color:#c00;}
+#celebrity .mtop{height:30px;line-height:30px;padding:0 10px;margin-right:10px;margin-top:15px;color:#c00;font-weight:bold;background:#f6f6f6;border-top:1px solid #e3e3e3;}
+#celebrity .mtop .r{font-weight:normal;}
+#celebrity ul{padding-top:6px;}
+#celebrity li{width:134px;float:left;padding:5px 5px 10px 5px;margin:0 10px 10px 0;margin-bottom:8px;display:inline;border:1px solid #eee;}
+#celebrity .avatar{width:50px;height:50px; float:left;padding:2px;background:#fff;border:1px solid #eee;}
+#celebrity .info{width:68px;float:right;padding-top:6px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+#celebrity .info a{text-decoration:underline;}
+#celebrity .cont{width:134px;line-height:18px;float:left;padding-top:5px;}
+
+#albumAdd{padding:30px 0 0 0;}
+#albumAdd p{height:36px;}
+#albumAdd .l{width:80px;padding:4px 0 0 20px;text-align:right;font-family:Tahoma;}
+#albumAdd .r{float:left;}
+#albumAdd .t{float:left;padding:6px 0 0 15px;}
+#albumAdd .t a{text-decoration:underline;}
+
+#photoEdit{padding:30px 0 0 0;position:relative;}
+#photoEdit p{clear:both;overflow:hidden;padding:5px 0;}
+#photoEdit .l{width:90px;padding-top:8px;font-size:12px;text-align:right;}
+#photoEdit .r{float:left;}
+#photoEdit .adduser{width:155px;height:290px; overflow:hidden;border:1px solid #ddd;position:absolute;top:36px;right:0;}
+#photoEdit .adduser .top{height:22px;line-height:22px;color:#999;font-weight:bold;padding:0 10px;border-bottom:1px solid #ddd;}
+#photoEdit .adduser ul{padding:10px;}
+#photoEdit .adduser li{width:70px;height:25px;float:left; margin:0; padding:0;overflow:hidden;}
+
+
+.bank {
+	border-top: 0;
+	background-color: #fff;
+	width: 468px;
+	padding-bottom: 0
+}
+
+.nav p.upload-time {
+	color: #999;
+	float: left;
+	margin-right: 10px;
+	height: 18px;
+	line-height: 20px;
+}
+
+.commentalbum {
+	width: 468px;
+	padding: 5px 0 10px;
+	margin-bottom: 30px;
+	background-color: #F0F5F8;
+}
+
+.commentalbum .m-editor {
+	width: 394px;
+	float: left;
+}
+
+.commentalbum .m-editor textarea#cmtbody {
+	width: 392px;
+	height: 90px; *
+	margin-top: -1px;
+}
+
+.commentalbum .user-avatar {
+	float: left;
+	width: 50px;
+	height: 50px;
+	padding: 0 8px 0 6px;
+}
+
+.commentalbum .user-avatar img.avatar {
+	position: absolute;
+	display: block;
+	position: absolute;
+	width: 50px;
+	clip: rect(0, 50px, 50px, 0);
+}
+
+dl.replies dt,dl.replies dd {
+	margin-bottom: 2px;
+	padding: 6px;
+	background-color: #f0f5f8;
+	border-bottom: 1px solid #e6eff7;
+	background-repeat: no-repeat; *
+	zoom: 1;
+}
+
+dl.replies dd {
+	min-height: 50px;
+	_height: 50px;
+	clear: both;
+	word-wrap: break-word; *
+	zoom: 1;
+}
+
+dl.replies dd a.avatar {
+	float: left;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin-right: 8px; *
+	zoom: 1;
+}
+
+dl.replies dd img.avatar {
+	width: 50px;
+	float: left;
+}
+
+dl.replies dd div.info {
+	margin-left: 58px;
+	line-height: 1.4em;
+}
+
+dl.replies dd div.reply {
+	margin-left: 58px;
+	_zoom: 1;
+}
+
+dl.replies dd span.time {
+	margin-left:10px;
+	font-size: 10px;
+	color: #808080;
+}
+
+dl.replies dd p.content {
+	display: inline;
+	white-space: normal;
+	word-wrap: break-word;
+	word-break: break-all;
+	overflow: auto;
+}
+
+dl.replies  .reply p span {
+	color: #333;
+}
+
+dl.replies {
+	width: 468px;
+}
+
+
+
+dl.replies a.x {
+	display:block;
+	float:right;
+	height:14px;
+	text-decoration:none;
+	width:14px;
+	background: transparent url(../images/x.png) no-repeat scroll -225px -24px;;
+}
+
+dl.replies a.x:hover {
+	background-position: -225px -38px;
+	text-decoration: none
+}
+
+.bxTool,dl.replies { *
+	margin: 0;
+	zoom: 1
+}
+
+
+
+#replyform { *
+	zoom: 1;
+	border: 1px #ffffff solid;
+} 
+#editorFormB `tn{
+	width: 90px;
+}

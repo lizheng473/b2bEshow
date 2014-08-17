@@ -1,0 +1,29 @@
+﻿@charset "utf-8";
+/*导航*/
+.accList{width:149px;float:left;padding:10px 0 10px 0;font-size:14px;}
+.accList li{width:100px;float:left;margin:0 0 10px 20px;display:inline;padding-left:22px;}
+.accList li a:hover{text-decoration:underline;}
+.accList .on{background:url(../images/acc_icon.gif) no-repeat;}
+.accList .on a{font-weight:bold;text-decoration:underline;}
+
+/*内容*/
+#accContent{}
+#accContent .title{color:#333;font-size:14px;font-weight:bold;padding:5px 0 15px 10px;border-bottom:1px solid #ddd;clear:both;overflow:hidden;position:relative;}
+#accContent .title a{float:right;font-size:12px;font-weight:normal;}
+#accContent .title .navtxt{position:absolute;top:5px;right:20px;}
+#accContent .title .navtxt a:hover{text-decoration:underline;}
+#accContent .subnav{color:#ddd;padding:10px 0 10px 0;border-bottom:1px dotted #ddd;}
+#accContent .cont{padding:1px 10px 0 10px;}
+#accContent .contxt{padding:21px 10px 0 10px;}
+#accContent .contxt p{line-height:22px;clear:both;}
+#accContent .contxt p a{text-decoration:underline;}
+#accContent .contxt .hc{width:255px;float:left;}
+#accContent .helptxt p{line-height:22px;clear:both;padding-right:100px;}
+#accContent .helptxt .tit{padding-top:30px;color:#359;font-size:14px;font-weight:bold;}
+#accContent .helptxt .gettop{height:20px;margin-top:10px;border-bottom:1px solid #e2e2e2;position:relative;}
+#accContent .helptxt .gettop a{width:40px;height:20px;display:block; position:absolute;top:0;right:0;background:#fff url(../images/get_top.gif) no-repeat 6px 5px;}
+#accContent .helpli{padding:15px 0 10px 0;border-bottom:1px solid #e2e2e2;}
+#accContent .helpli li{padding:3px;color:#359;}
+#accContent .helpli li a{text-decoration:underline;}
+#accContent .helpli .tit{padding-bottom:5px;color:#333;font-size:14px;font-weight:bold;}
+

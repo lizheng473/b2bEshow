@@ -1,0 +1,25 @@
+﻿@charset "utf-8";
+#top{color:#999;font-size:14px;font-weight:bold;}
+#workmate{padding:20px 10px;}
+#workmate ul{padding-top:10px;border-bottom:1px;}
+#workmate li{border-top:1px solid #ddd; }
+#workmate .info{margin-left:60px;margin-top:-52px;height:23px;line-height:23px;padding:0 10px;background:#f3f3f3; width:690px;}
+#workmate .info1{height:23px;line-height:23px;padding:0 10px;background:#f3f3f3;}
+#workmate .msg{float:left;;color:#999;padding-right:20px;}
+#workmate .tips{float:right;color:#ddd;}
+#workmate .tips a{color:#999;}
+#workmate .contxt1{line-height:20px;margin-left:60px;padding:10px 5px 5px 5px;font-size:12px;clear:both;word-break:break-all;}
+#workmate .contxt{line-height:20px;padding:3px 10px 10px 10px;font-size:12px;clear:both;word-break:break-all;}
+
+/*内容区列表*/
+#friend{padding:20px 10px;}
+#friend ul{padding-top:10px;border-bottom:1px solid #ddd;}
+#friend li{border-top:1px solid #ddd;}
+#friend .info{height:22px;line-height:22px;padding:0 10px;background:#f3f3f3;}
+#friend .msg{float:left;color:#999;padding:0 10px 0 12px;}
+#friend .msg a{margin-right: 5px;}
+#friend .tips{float:right;color:#ddd;}
+#friend .tips a{color:#999;}
+#friend .cont{height:auto!important;height:60px;min-height:60px;padding:7px 0 10px 0;font-size:12px;clear:both;position:relative;}
+#friend .contxt{line-height:20px;padding-left:78px;display:block;clear:both;word-break:break-all;}
+#friend .avatar{width:50px;height:50px;padding:2px;border:1px solid #ccc;position:absolute;top:10px;left:10px;}

@@ -1,0 +1,40 @@
+﻿@charset "utf-8";
+#celebrity{padding:0 0 0 10px;}
+#celebrity .subnav{padding:10px 0 5px 10px;color:#ddd;}
+#celebrity .subnav strong{color:#c00;font-weight:normal}
+#celebrity .subnav2{padding:5px 0 5px 10px;margin:10px 10px 0 0;color:#ddd;font-weight:bold;background:#f1f1f1;}
+#celebrity .subnav2 strong{color:#c00;}
+#celebrity .mtop{height:30px;line-height:30px;padding:0 10px;margin-right:10px;margin-top:15px;color:#c00;font-weight:bold;background:#f6f6f6;border-top:1px solid #e3e3e3;}
+#celebrity .mtop .r{font-weight:normal;}
+#celebrity ul{padding-top:6px;}
+#celebrity li{width:134px;float:left;padding:5px 5px 10px 5px;margin:0 10px 10px 0;margin-bottom:8px;display:inline;border:1px solid #eee;}
+#celebrity .avatar{width:50px;height:50px; float:left;padding:2px;background:#fff;border:1px solid #eee;}
+#celebrity .info{width:68px;float:right;padding-top:6px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+#celebrity .info a{text-decoration:underline;}
+#celebrity .cont{width:134px;line-height:18px;float:left;padding-top:5px;}
+
+#celebrityList{padding:0 10px 0 10px;}
+#celebrityList .mtop{height:30px;line-height:30px;padding:0 10px;margin-top:15px;color:#c00;font-weight:bold;background:#f6f6f6;border-top:1px solid #e3e3e3;}
+#celebrityList .list{width:750px;height:90px;overflow:hidden;border-bottom:1px solid #ebebeb;padding:0 10px;}
+#celebrityList .box{width:56px;float:left;margin-top:10px;}
+#celebrityList .avatar{width:50px;height:50px;float:left;padding:2px;background:#fff;border:1px solid #eee;}
+#celebrityList .name{width:56px;float:left;padding-top:3px;text-align:center;overflow:hidden;}
+#celebrityList .list_ul{float:right;padding:16px 0 0 0;}
+#celebrityList .list_ul li{width:150px;height:21px;line-height:21px;font-size:12px;}
+#celebrityList .list_content {float:left;margin:10px 0 0 12px;display:inline;color:#999;}
+#celebrityList .list_content .stxt {height:22px;line-height:22px;width:180px;float:left;font-size:12px;}
+
+#edit{padding:30px 0 0 0;position:relative;}
+#edit p{clear:both;overflow:hidden;padding:5px 0;}
+#edit .l{width:90px;padding-top:8px;font-size:12px;text-align:right;}
+#edit .r{float:left;}
+
+
+#view{padding:20px 10px;}
+#view ul{padding-top:10px;border-bottom:1px solid #ddd;}
+#view li{border-top:1px solid #ddd;}
+#view .info{height:22px;line-height:22px;padding:0 10px;background:#f3f3f3;}
+#view .msg{float:left;color:#999;padding-right:20px;}
+#view .tips{float:right;color:#ddd;}
+#view .tips a{color:#999;}
+#view .contxt{line-height:20px;padding:3px 10px 10px 10px;font-size:12px;clear:both;word-break:break-all;}

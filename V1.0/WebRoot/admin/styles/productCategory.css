@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+#securities{padding:15px 0 0 0;}
+#securities .subnav{padding:0 0 5px 10px;color:#ddd;}
+#securities .subnav a{white-space:nowrap;word-break:break-all;}
+#securities .subnav a:hover{text-decoration:underline;}
+#securities .subnav .on{color:#c00;}
+
+#securities .top{height:26px;line-height:26px;margin-top:20px;padding:0 10px;color:#a00;font-weight:bold;border-bottom:1px solid #ddd;background:#f6f6f6;}
+#securities .tab .tbg{color:#666;background:#eee;}
+#securities .tab .rbg{color:#666;background:#f6f6f6; border-right:1px solid #eee;}
+#securities .tab td{line-height:30px;text-align:center;border-bottom:1px solid #eee;}
+#securities .tab td a{}
+
+#securities .usertop{height:58px;padding:0 0 10px 10px;margin-bottom:10px;border-bottom:1px solid #ddd;position:relative;}
+#securities .upPage{position:absolute;top:10px;right:0px;padding-left:12px;}
+#securities .avatar{width:50px;height:50px;padding:2px;border:1px solid #ccc;background:#fff;position:absolute;top:2px;left:5px;}
+#securities .subtitle{height:22px;padding:8px 0 0 60px;font-size:14px;font-weight:bold;}
+#securities .submenu{padding:3px 0 0 60px;color:#ddd;}
+#securities .submenu a{text-decoration:underline;}
+
+#securitiesTxt{padding:30px 0 0 0;}
+#securitiesTxt p{height:36px;}
+#securitiesTxt .l{width:80px;padding:4px 0 0 20px;text-align:right;font-family:Tahoma;}
+#securitiesTxt .r{float:left;}
+#securitiesTxt .t{float:left;padding:6px 0 0 15px;}
+#securitiesTxt .t a{text-decoration:underline;}
+
+#securitiesInfo{padding:20px 10px 0 10px;}
+#securitiesInfo .title{height:26px;line-height:26px;padding:0 10px 0 20px;color:#666;font-weight:bold;border-bottom:1px solid #eee;background:#f6f6f6 url(../images/pix_03.gif) no-repeat 8px 7px;}
+#securitiesInfo .info{float:left;padding-left:5px;font-size:14px;font-weight:bold;color:#c00}
+#securitiesInfo .info a{text-decoration:underline;}
+#securitiesInfo .contxt{font-size:12px;padding:10px 10px 20px 10px;}
+#securitiesInfo .subnav{padding:10px 0 5px 10px;color:#ddd;}
+#securitiesInfo .subnav a:hover{text-decoration:underline;}
+#securitiesInfo .subnav .on{color:#333;}
+#securitiesInfo .clist{ margin:0;}
+#securitiesInfo .clist td{line-height:30px;text-align:center;border-bottom:1px dotted #ddd;}
+#securitiesInfo .clist td a{font-family:Tahoma;}
+#securitiesInfo .clist .tdtit{color:#666;background:#f3f3f3;}
+#securitiesInfo .clist .tdtit td{ line-height:24px; height:24px;}
+#securitiesInfo .clist .tdfl{padding-left:5px;text-align:left;}
+
+#securitiesInfo .navbnt a{width:100px;height:30px;line-height:30px;display:block;float:left;margin-right:10px;text-align:center;border-top:1px solid #eee;border-left:1px solid #fff;border-right:1px solid #999;border-bottom:1px solid #999;background:#f1f1f1;}
+
+#securitiesInfo .tips{width:200px;margin:44px 80px 0 0;float:left;display:inline;border:1px solid #ddd;}
+#securitiesInfo .tips li{height:26px;line-height:26px;float:left;border-bottom:1px solid #f3f3f3;}
+#securitiesInfo .tips .l{width:85px;padding-right:3px;text-align:right;background:#f3f3f3;}
+#securitiesInfo .tips .r{width:105px;}
+
+#securitiesGroup{padding:15px 0 0 0px;}
+#securitiesGroup ul{width:773px;}
+#securitiesGroup li{padding:8px 0 8px 10px;line-height:18px;overflow:hidden;border-bottom:1px solid #eee;}
+#securitiesGroup li a{margin-right:10px;display:inline;}
+#securitiesGroup .l{width:200px;padding-left:10px;font-size:12px;}
+#securitiesGroup .r{width:70px;float:left;padding-left:20px;}
+#securitiesGroup .r a{color:#999;font-family:Tahoma;}
+#securitiesGroup .r a:hover{color:#36c;text-decoration:none;}
+#securitiesGroup .setting a{padding-left:15px;background:url(../images/icon_setting.gif) no-repeat 0 1px;}
+#securitiesGroup .setting a:hover{padding-left:15px;background:url(../images/icon_setting2.gif) no-repeat 0 1px;}
+#securitiesGroup .del a{padding-left:13px;background:url(../images/icon_del.gif) no-repeat 0 3px;}
+#securitiesGroup .del a:hover{padding-left:13px;background:url(../images/icon_del2.gif) no-repeat 0 3px;}
+#securitiesGroup .add{padding:10px 0 0 15px;}
+
+.sidesearch{width:144px;height:22px;border:1px solid #999999;position:relative;background:#ffffff url(../images/icon/magnifier.gif) 2.5% 40% no-repeat;padding-left:18px; margin-top:8px;}
+.sidesearch-go{width:24px;height:22px;text-indent:-999em;zoom:1;position:absolute;border:0;padding:0;top:0;right:0;cursor:pointer;background:url(../images/sidesearch-go.gif) no-repeat;}
+
+#securitiesCasual{padding:5px 10px 0 10px;}
+#securitiesCasual ul{padding-top:10px;border-bottom:1px solid #ddd;}
+#securitiesCasual li{border-top:1px solid #ddd;}
+#securitiesCasual .info{height:22px;line-height:22px;padding:0 10px;background:#f3f3f3;}
+#securitiesCasual .msg{float:left;color:#999;padding:0 10px 0 10px;}
+#securitiesCasual .msg a{text-decoration:underline;}
+#securitiesCasual .tips{float:right;color:#ddd;}
+#securitiesCasual .tips a{color:#999;}
+#securitiesCasual .cont{height:auto!important;height:60px;min-height:60px;padding:7px 0 10px 0;font-size:12px;clear:both;position:relative;}
+#securitiesCasual .contxt{line-height:20px;padding-left:78px;display:block;clear:both;word-break:break-all;color:#999;}
+#securitiesCasual .stxt{width:160px;float:left;}
+#securitiesCasual .avatar{width:50px;height:50px;padding:2px;border:1px solid #ccc;position:absolute;top:10px;left:10px;}

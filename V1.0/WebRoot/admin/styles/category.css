@@ -1,0 +1,21 @@
+@charset "utf-8";
+#categoryGroup{padding:15px 0 0 0px;}
+#categoryGroup ul{width:773px;}
+#categoryGroup li{padding:8px 0 8px 10px;line-height:18px;overflow:hidden;border-bottom:1px solid #eee;}
+#categoryGroup li a{margin-right:10px;display:inline;}
+#categoryGroup .l{width:200px;padding-left:10px;font-size:12px;}
+#categoryGroup .r{width:70px;float:left;padding-left:20px;}
+#categoryGroup .r a{color:#999;font-family:Tahoma;}
+#categoryGroup .r a:hover{color:#36c;text-decoration:none;}
+#categoryGroup .setting a{padding-left:15px;background:url(../images/icon_setting.gif) no-repeat 0 1px;}
+#categoryGroup .setting a:hover{padding-left:15px;background:url(../images/icon_setting2.gif) no-repeat 0 1px;}
+#categoryGroup .del a{padding-left:13px;background:url(../images/icon_del.gif) no-repeat 0 3px;}
+#categoryGroup .del a:hover{padding-left:13px;background:url(../images/icon_del2.gif) no-repeat 0 3px;}
+#categoryGroup .add{padding:10px 0 0 15px;}
+
+#categoryAdd{padding:30px 0 0 0;}
+#categoryAdd p{height:36px;}
+#categoryAdd .l{width:80px;padding:4px 0 0 20px;text-align:right;font-family:Tahoma;}
+#categoryAdd .r{float:left;}
+#categoryAdd .t{float:left;padding:6px 0 0 15px;}
+#categoryAdd .t a{text-decoration:underline;}

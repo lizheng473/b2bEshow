@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd"
+       default-lazy-init="true">
+
+	<bean id="albumDao" class="com.logo.eshow.dao.hibernate.AlbumDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+    <bean id="appDao" class="com.logo.eshow.dao.hibernate.AppDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+    <bean id="blogDao" class="com.logo.eshow.dao.hibernate.BlogDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+   
+    <bean id="blogCommentDao" class="com.logo.eshow.dao.hibernate.BlogCommentDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+    <bean id="boardDao" class="com.logo.eshow.dao.hibernate.BoardDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+    <bean id="categoryDao" class="com.logo.eshow.dao.hibernate.CategoryDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+     
+    <bean id="feedbackDao" class="com.logo.eshow.dao.hibernate.FeedbackDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+    <bean id="infoDao" class="com.logo.eshow.dao.hibernate.InfoDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+    <bean id="photoDao" class="com.logo.eshow.dao.hibernate.PhotoDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+    <bean id="photoCommentDao" class="com.logo.eshow.dao.hibernate.PhotoCommentDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+    <bean id="postDao" class="com.logo.eshow.dao.hibernate.PostDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+    <bean id="serviceDao" class="com.logo.eshow.dao.hibernate.ServiceDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+    <bean id="serviceTypeDao" class="com.logo.eshow.dao.hibernate.ServiceTypeDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+    <bean id="thumbDao" class="com.logo.eshow.dao.hibernate.ThumbDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+    <bean id="thumbImgDao" class="com.logo.eshow.dao.hibernate.ThumbImgDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+    <bean id="topicDao" class="com.logo.eshow.dao.hibernate.TopicDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+  
+    <bean id="topicCommentDao" class="com.logo.eshow.dao.hibernate.TopicCommentDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+    <bean id="twitterDao" class="com.logo.eshow.dao.hibernate.TwitterDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+    <bean id="twitterCommentDao" class="com.logo.eshow.dao.hibernate.TwitterCommentDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+     <bean id="productCategoryDao" class="com.logo.eshow.dao.hibernate.ProductCategoryDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+      <bean id="productDao" class="com.logo.eshow.dao.hibernate.ProductDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <!-- Add new DAOs here -->
+    
+    <bean id="albumManager" class="com.logo.eshow.service.impl.AlbumManagerImpl">
+        <constructor-arg ref="albumDao"/>
+    </bean>
+    
+    <bean id="appManager" class="com.logo.eshow.service.impl.AppManagerImpl">
+        <constructor-arg ref="appDao"/>
+    </bean>
+    
+    <bean id="blogManager" class="com.logo.eshow.service.impl.BlogManagerImpl">
+        <constructor-arg ref="blogDao"/>
+    </bean>
+    
+    <bean id="blogCommentManager" class="com.logo.eshow.service.impl.BlogCommentManagerImpl">
+        <constructor-arg ref="blogCommentDao"/>
+    </bean>
+    
+    <bean id="boardManager" class="com.logo.eshow.service.impl.BoardManagerImpl">
+        <constructor-arg ref="boardDao"/>
+    </bean>
+    
+    <bean id="categoryManager" class="com.logo.eshow.service.impl.CategoryManagerImpl">
+        <constructor-arg ref="categoryDao"/>
+    </bean>
+    
+    <bean id="feedbackManager" class="com.logo.eshow.service.impl.FeedbackManagerImpl">
+        <constructor-arg ref="feedbackDao"/>
+    </bean>
+    
+    <bean id="infoManager" class="com.logo.eshow.service.impl.InfoManagerImpl">
+        <constructor-arg ref="infoDao"/>
+    </bean>
+    
+    <bean id="photoManager" class="com.logo.eshow.service.impl.PhotoManagerImpl">
+        <constructor-arg ref="photoDao"/>
+    </bean>
+    
+    <bean id="photoCommentManager" class="com.logo.eshow.service.impl.PhotoCommentManagerImpl">
+        <constructor-arg ref="photoCommentDao"/>
+    </bean>
+    
+    <bean id="postManager" class="com.logo.eshow.service.impl.PostManagerImpl">
+        <constructor-arg ref="postDao"/>
+    </bean>
+    
+    <bean id="serviceManager" class="com.logo.eshow.service.impl.ServiceManagerImpl">
+        <constructor-arg ref="serviceDao"/>
+    </bean>
+    
+    <bean id="serviceTypeManager" class="com.logo.eshow.service.impl.ServiceTypeManagerImpl">
+        <constructor-arg ref="serviceTypeDao"/>
+    </bean>
+    
+    <bean id="thumbManager" class="com.logo.eshow.service.impl.ThumbManagerImpl">
+        <constructor-arg ref="thumbDao"/>
+    </bean>
+    
+    <bean id="thumbImgManager" class="com.logo.eshow.service.impl.ThumbImgManagerImpl">
+        <constructor-arg ref="thumbImgDao"/>
+    </bean>
+    
+    <bean id="topicManager" class="com.logo.eshow.service.impl.TopicManagerImpl">
+        <constructor-arg ref="topicDao"/>
+    </bean>
+  
+    <bean id="topicCommentManager" class="com.logo.eshow.service.impl.TopicCommentManagerImpl">
+        <constructor-arg ref="topicCommentDao"/>
+    </bean>
+    
+    <bean id="twitterManager" class="com.logo.eshow.service.impl.TwitterManagerImpl">
+        <constructor-arg ref="twitterDao"/>
+    </bean>
+    
+    <bean id="twitterCommentManager" class="com.logo.eshow.service.impl.TwitterCommentManagerImpl">
+        <constructor-arg ref="twitterCommentDao"/>
+    </bean>
+    
+    <bean id="productCategoryManager" class="com.logo.eshow.service.impl.ProductCategoryManagerImpl">
+        <constructor-arg ref="productCategoryDao"/>
+    </bean>
+    
+     <bean id="productManager" class="com.logo.eshow.service.impl.ProductManagerImpl">
+        <constructor-arg ref="productDao"/>
+    </bean>
+
+    <!-- Add new Managers here -->
+
+    <!-- Add new Actions here -->
+    
+    <bean id="compassSearchService" class="com.logo.eshow.components.compass.CompassSearchService">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+</beans>

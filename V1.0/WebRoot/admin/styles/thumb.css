@@ -1,0 +1,21 @@
+@charset "utf-8";
+#subnav{padding:5px 0 5px 10px;}
+#thumbGroup{padding:15px 0 0 0px;}
+#thumbGroup ul{width:773px;}
+#thumbGroup li{padding:8px 0 8px 10px;line-height:18px;overflow:hidden;border-bottom:1px solid #eee;}
+#thumbGroup li a{margin-right:10px;display:inline;}
+#thumbGroup .l{width:150px;padding-left:10px;font-size:12px;}
+#thumbGroup .r{width:70px;float:left;padding-left:20px;}
+#thumbGroup .r a{color:#999;font-family:Tahoma;}
+#thumbGroup .r a:hover{color:#36c;text-decoration:none;}
+#thumbGroup .setting a{padding-left:15px;background:url(../images/icon_setting.gif) no-repeat 0 1px;}
+#thumbGroup .setting a:hover{padding-left:15px;background:url(../images/icon_setting2.gif) no-repeat 0 1px;}
+#thumbGroup .del a{padding-left:13px;background:url(../images/icon_del.gif) no-repeat 0 3px;}
+#thumbGroup .del a:hover{padding-left:13px;background:url(../images/icon_del2.gif) no-repeat 0 3px;}
+#thumbGroup .add{padding:10px 0 0 15px;}
+
+#thumbEdit{padding:30px 0 0 0;position:relative;}
+#thumbEdit p{clear:both;overflow:hidden;padding:5px 0;}
+#thumbEdit .l{width:90px;padding-top:8px;font-size:12px;text-align:right;}
+#thumbEdit .r{float:left;}
+
