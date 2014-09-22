@@ -51,7 +51,7 @@
 							<br />
 							<div align="center">
 								<img
-									src="${pageContext.request.contextPath}/upload/product/<s:date name='%{#view.product.addTime}' format='yyyyMMdd' />/${view.product.img}"
+									src="${pageContext.request.contextPath}/upload/product/<s:date name='%{#view.product.addTime}' format='yyyyMMdd' />/view/${view.product.img}"
 									width="200" height="200" />
 
 							</div>

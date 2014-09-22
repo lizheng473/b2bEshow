@@ -51,21 +51,26 @@
 									id="product${id}">
 									<div class="box">
 										<div class="avatar">
-										<c:if test="${photo == null}">
-											<img  src="${pageContext.request.contextPath}/common/images/user50-50.jpg"
-													  alt="${nickname}" width="50" height="50" />
-										</c:if>
-										<c:if test="${photo != null}">
-											<a href="<c:url value='product/view/${id}'/>"><img
+<!-- 										<c:if test="${photo == null}"> -->
+<!-- 											<img  src="${pageContext.request.contextPath}/common/images/user50-50.jpg" -->
+<!-- 													  alt="${nickname}" width="50" height="50" /> -->
+<!-- 										</c:if> -->
+<!-- 										<c:if test="${photo != null}"> -->
+<!-- 											<a href="<c:url value='product/view/${id}'/>"><img -->
+<!-- 													src="${pageContext.request.contextPath}/upload/product/<s:date name='%{addTime}' format='yyyyMMdd' />/${img}" -->
+<!-- 													width="50" height="50" /> </a> -->
+<!-- 										</c:if> -->
+										<a href="<c:url value='product/view/${id}'/>"><img
 													src="${pageContext.request.contextPath}/upload/product/<s:date name='%{addTime}' format='yyyyMMdd' />/${img}"
 													width="50" height="50" /> </a>
-										</c:if>
 										</div>
-										<div class="name">
-											<a href="/StockMatch/Stock?MatchId=2&uid=100397">${user.username}</a>
-										</div>
+<!-- 										<div class="name"> -->
+<!-- 											<a href="/StockMatch/Stock?MatchId=2&uid=100397">${user.username}</a> -->
+<!-- 										</div> -->
+										
 									</div>
 									<div class="list_content">
+									
 										<div>
 											名称：
 											<span class="c333">${name}</span>

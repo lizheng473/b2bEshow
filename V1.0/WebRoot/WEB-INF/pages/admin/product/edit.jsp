@@ -72,6 +72,32 @@
 									</s:iterator>
 								</select>
 							</p>
+							
+							
+							<p>
+								<span class="l">产品材质:&nbsp;</span>
+								 <input name="product.material" style="width: 300px;" maxlength="50"
+										type="text" onblur="this.className='inputtext'" 
+										class="inputtext text-input validate['required']" 
+										value="${view.product.material}" />
+							</p>
+							<p>
+								<span class="l">产品产地:&nbsp;</span>
+								 <input name="product.origin" style="width: 300px;" maxlength="50"
+										type="text" onblur="this.className='inputtext'" 
+										class="inputtext text-input validate['required']" 
+										value="${view.product.origin}" />
+							</p>
+							<p>
+								<span class="l">产品尺寸:&nbsp;</span>
+								 <input name="product.size" style="width: 300px;" maxlength="50"
+										type="text" onblur="this.className='inputtext'" 
+										class="inputtext text-input validate['required']" 
+										value="${view.product.size}" />
+							</p>
+							
+							
+							
 							<p>
 								<span class="l">选择图片:&nbsp;</span>
 								<span class="1"> <input type="file" name="file"

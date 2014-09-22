@@ -54,6 +54,7 @@
 										class="inputtext text-input validate['required']"  style="width: 300px;" maxlength="50"
 										type="text" onblur="this.className='inputtext'" /> </span>
 							</p>
+							
 							<p>
 								<span class="l">选择分类:&nbsp;</span>
 								<span class="r">&nbsp; <s:action
@@ -66,6 +67,24 @@
 											</option>
 										</s:iterator>
 									</select> </span>
+							</p>
+							<p>
+								<span class="l">产品材质:&nbsp;</span>
+								<span class="r">&nbsp; <input name="product.material"
+										class="inputtext text-input validate['required']"  style="width: 300px;" maxlength="50"
+										type="text" onblur="this.className='inputtext'" /> </span>
+							</p>
+							<p>
+								<span class="l">产品产地:&nbsp;</span>
+								<span class="r">&nbsp; <input name="product.origin"
+										class="inputtext text-input validate['required']"  style="width: 300px;" maxlength="50"
+										type="text" onblur="this.className='inputtext'" /> </span>
+							</p>
+							<p>
+								<span class="l">产品尺寸:&nbsp;</span>
+								<span class="r">&nbsp; <input name="product.size"
+										class="inputtext text-input validate['required']"  style="width: 300px;" maxlength="50"
+										type="text" onblur="this.className='inputtext'" /> </span>
 							</p>
 							<p>
 								<span class="l">选择图片:&nbsp;</span>
