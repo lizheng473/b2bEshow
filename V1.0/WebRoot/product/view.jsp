@@ -31,13 +31,64 @@
 				<tr>
 					<td>
 							<img
-								src="${pageContext.request.contextPath}/upload/product/<s:date name='%{#view.product.addTime}' format='yyyyMMdd' />/${view.product.img}"
+								src="${pageContext.request.contextPath}/upload/product/<s:date name='%{#view.product.addTime}' format='yyyyMMdd' />/view/${view.product.img}"
 								width="200" height="200" />
 					</td>
-					<td>
-						${view.product.name}
+					
+				<td>
+					<p>
+							<span class="l">产品名称:&nbsp;</span>
+									<span class="r">&nbsp; <input name="product.material"
+											class="inputtext text-input validate['required']"  style="width: 300px;" maxlength="50"
+											type="text" onblur="this.className='inputtext'" 
+											value = "${view.product.name}" readOnly
+											/> </span>
+					</p>
+					<p>
+								<span class="l">产品类别:&nbsp;</span>
+								<span class="r">&nbsp; <s:action
+										name="productCategory!list" id="productCategoryList"
+										executeResult="false" /> <select name="productCategoryId" readOnly>
+										<s:iterator value="%{#productCategoryList.productCategories}"
+											status="rowStatus">
+											<option value="${id}">
+												${name}
+											</option>
+										</s:iterator>
+									</select> </span>
+							</p>
+							<p>
+								<span class="l">产品材质:&nbsp;</span>
+								<span class="r">&nbsp; <input name="product.material"
+										class="inputtext text-input validate['required']"  style="width: 300px;" maxlength="50"
+										type="text" onblur="this.className='inputtext'" 
+										value = "${view.product.material}" readOnly
+										/> </span>
+							</p>
+							<p>
+								<span class="l">产品产地:&nbsp;</span>
+								<span class="r">&nbsp; <input name="product.origin"
+										class="inputtext text-input validate['required']"  style="width: 300px;" maxlength="50"
+										type="text" onblur="this.className='inputtext'" 
+										value = "${view.product.origin}" readOnly
+										/> </span>
+							</p>
+							<p>
+								<span class="2">产品尺寸:&nbsp;</span>
+								<span class="r">&nbsp; <input name="product.size"
+										class="inputtext text-input validate['required']"  style="width: 300px;" maxlength="50"
+										type="text" onblur="this.className='inputtext'" 
+										value = "${view.product.size}" readOnly
+										/> </span>
+							</p>
+					
+				</td>
+				</tr>
+				<tr>
+				<td>
+				
 					<input type="submit" class="botton" value="购买"/>
-					</td>
+				</td>
 				</tr>
 				<tr>
 					<td colspan=2>

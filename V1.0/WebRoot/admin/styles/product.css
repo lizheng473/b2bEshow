@@ -15,7 +15,7 @@
 
 #celebrityList{padding:0 10px 0 10px;}
 #celebrityList .mtop{height:30px;line-height:30px;padding:0 10px;margin-top:15px;color:#c00;font-weight:bold;background:#f6f6f6;border-top:1px solid #e3e3e3;}
-#celebrityList .list{width:750px;height:90px;overflow:hidden;border-bottom:1px solid #ebebeb;padding:0 10px;}
+#celebrityList .list{width:750px;height:180px;overflow:hidden;border-bottom:1px solid #ebebeb;padding:0 10px;}
 #celebrityList .box{width:56px;float:left;margin-top:10px;}
 #celebrityList .avatar{width:50px;height:50px;float:left;padding:2px;background:#fff;border:1px solid #eee;}
 #celebrityList .name{width:56px;float:left;padding-top:3px;text-align:center;overflow:hidden;}

@@ -106,6 +106,7 @@ public class ProductAction extends BaseFileUploadAction {
 			String fileName = product.getId() + ".jpg";
 			ImageUtil.uploadImage(path, fileName, file, 200, 200, "zoom");
 			product.setImg(fileName);
+			product.setImgpath(path);
 			ImageUtil.resizeImage(path + "view/", path + "orig/", fileName,
 					600, 600, "zoom");
 			productManager.save(product);

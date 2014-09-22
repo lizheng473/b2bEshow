@@ -39,6 +39,50 @@ public class Product extends BaseObject implements Serializable {
 	private String img;
 	private Integer sequence;
 	private Boolean enabled;
+	/**产品材质**/
+	private String material;
+	/**产品产地**/
+	private String origin;
+	
+	/**产品尺寸**/
+	private String size;
+	
+	private String imgpath;
+	
+	@Column(name = "material", length = 40, nullable = false)
+	public String getMaterial() {
+		return material;
+	}
+
+	public void setMaterial(String material) {
+		this.material = material;
+	}
+	@Column(name = "origin", length = 40, nullable = false)
+	public String getOrigin() {
+		return origin;
+	}
+
+	public void setOrigin(String origin) {
+		this.origin = origin;
+	}
+
+	@Column(name = "size", length = 40, nullable = false)
+	public String getSize() {
+		return size;
+	}
+
+	public void setSize(String size) {
+		this.size = size;
+	}
+	
+	@Column(name = "imgpath", length = 40, nullable = true)
+	public String getImgpath() {
+		return imgpath;
+	}
+
+	public void setImgpath(String imgpath) {
+		this.imgpath = imgpath;
+	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

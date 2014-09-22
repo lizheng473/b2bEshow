@@ -114,6 +114,5 @@
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/xfire-xmlbeans-1.2.6.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/xml-apis.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/xwork-2.0.5.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jstl-1.1.2.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>

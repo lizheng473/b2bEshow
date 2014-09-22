@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-module
   type="WEB"
-  name="eshow-base"
+  name="eshow_b2b"
   id="myeclipse.1222177829890"
   context-root="/eshow-demo"
   j2ee-spec="5.0"
-  archive="eshow-base.war">
+  archive="eshow_b2b.war">
   <attributes>
     <attribute name="webrootdir" value="/WebRoot" />
   </attributes>
