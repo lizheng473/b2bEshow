@@ -93,26 +93,26 @@ public class OrderAction extends BaseFileUploadAction {
 	}
 
 	public String save() throws Exception {
-		product.setAddTime(new Date());
-		if (productCategoryId != null) {
-			product.setProductCategory(productCategoryManager.get(productCategoryId));
-		}
-		product.setUser(getSessionUser());
-		product = productManager.save(product);
-		if (file != null) {
-			String path = "upload/product/"
-					+ DateUtil.getDateTime("yyyyMMdd", product.getAddTime())
-					+ "/";
-			String fileName = product.getId() + ".jpg";
-			ImageUtil.uploadImage(path, fileName, file, 200, 200, "zoom");
-			product.setImg(fileName);
-			ImageUtil.resizeImage(path + "view/", path + "orig/", fileName,
-					600, 600, "zoom");
-			productManager.save(product);
-		}
-		
-		saveMessage("添加成功");
-		id = product.getId();
+//		product.setAddTime(new Date());
+//		if (productCategoryId != null) {
+//			product.setProductCategory(productCategoryManager.get(productCategoryId));
+//		}
+//		product.setUser(getSessionUser());
+//		product = productManager.save(product);
+//		if (file != null) {
+//			String path = "upload/product/"
+//					+ DateUtil.getDateTime("yyyyMMdd", product.getAddTime())
+//					+ "/";
+//			String fileName = product.getId() + ".jpg";
+//			ImageUtil.uploadImage(path, fileName, file, 200, 200, "zoom");
+//			product.setImg(fileName);
+//			ImageUtil.resizeImage(path + "view/", path + "orig/", fileName,
+//					600, 600, "zoom");
+//			productManager.save(product);
+//		}
+//		
+//		saveMessage("添加成功");
+//		id = product.getId();
 		return SUCCESS;
 	}
 

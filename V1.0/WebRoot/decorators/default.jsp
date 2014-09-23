@@ -38,7 +38,9 @@
 					<li class="page_item">
 						<a href="<c:url value='/blog/categories/1'/>" title="公司新闻">公司新闻</a>
 					</li>
-
+					<li class="cat-item">
+						<a href="<c:url value='/product/categories/'/>" title="产品">产品</a>
+					</li>
 					<li class="cat-item">
 						<a href="<c:url value='/info/price'/>" title="报价中心">报价中心</a>
 					</li>

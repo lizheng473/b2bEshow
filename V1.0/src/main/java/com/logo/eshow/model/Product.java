@@ -47,8 +47,20 @@ public class Product extends BaseObject implements Serializable {
 	/**产品尺寸**/
 	private String size;
 	
+	/**产品价格**/
+	private double price;
+	
 	private String imgpath;
 	
+	@Column(name = "price")
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
 	@Column(name = "material", length = 40, nullable = false)
 	public String getMaterial() {
 		return material;

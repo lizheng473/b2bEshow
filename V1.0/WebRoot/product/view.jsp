@@ -24,7 +24,7 @@
 			</div>
 
 			<!-- .post -->
-			<s:form action="product!view.html" method="post" cssClass="creat_form clearfix">
+			<s:form action="order!view" method="post" cssClass="creat_form clearfix">
 			<div>
 				<input type="hidden" name="id" value="${view.product.id}" /> <br />
 				<table>
@@ -81,13 +81,27 @@
 										value = "${view.product.size}" readOnly
 										/> </span>
 							</p>
+							<p>
+								<span class="2">产品售价:&nbsp;</span>
+								<span class="r">&nbsp; <input name="product.price"
+										class="inputtext text-input validate['required']"  style="width: 300px;" maxlength="50"
+										type="text" onblur="this.className='inputtext'" 
+										value = "${view.product.price}" readOnly
+										/> </span>
+							</p>
+							<p>
+							
+								<input type="submit" class="botton" value="购买"/>
+								
+								<a	href="<c:url value='/order/view/${view.product.id}'/>"> 购买</a>
+								
+							</p>
 					
 				</td>
 				</tr>
 				<tr>
 				<td>
 				
-					<input type="submit" class="botton" value="购买"/>
 				</td>
 				</tr>
 				<tr>
