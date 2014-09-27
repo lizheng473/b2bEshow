@@ -86,7 +86,11 @@
       <bean id="productDao" class="com.logo.eshow.dao.hibernate.ProductDaoHibernate">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
-
+      <!-- Add new DAOs here -->
+<!--     orderFormDao -->
+	  <bean id="orderFormDao" class="com.logo.eshow.dao.hibernate.OrderFormDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
     <!-- Add new DAOs here -->
     
     <bean id="albumManager" class="com.logo.eshow.service.impl.AlbumManagerImpl">
@@ -174,7 +178,10 @@
     </bean>
 
     <!-- Add new Managers here -->
-
+	<bean id="orderFormManager" class="com.logo.eshow.service.impl.OrderFormManagerImpl">
+        <constructor-arg ref="orderFormDao"/>
+    </bean>
+    
     <!-- Add new Actions here -->
     
     <bean id="compassSearchService" class="com.logo.eshow.components.compass.CompassSearchService">

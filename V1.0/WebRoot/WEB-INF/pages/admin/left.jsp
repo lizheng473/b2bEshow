@@ -28,6 +28,10 @@
 				<img src="<c:url value='/admin/images/app_list_info.gif'/>">
 				<a href="<c:url value='/admin/info'/>">信息页</a>
 			</li>
+			<li>
+				<img src="<c:url value='/admin/images/app_list_info.gif'/>">
+				<a href="<c:url value='/admin/order'/>">订单查询</a>
+			</li>
 		</ul>
 		<div class="appPix"></div>
 		<div class="appAdd">

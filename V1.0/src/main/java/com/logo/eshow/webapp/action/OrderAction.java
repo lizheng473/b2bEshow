@@ -1,9 +1,12 @@
 package com.logo.eshow.webapp.action;
 
+import com.logo.eshow.bean.query.OrderFormQueryBean;
 import com.logo.eshow.bean.query.ProductQueryBean;
 import com.logo.eshow.common.page.Page;
 import com.logo.eshow.model.Blog;
+import com.logo.eshow.model.OrderForm;
 import com.logo.eshow.model.Product;
+import com.logo.eshow.service.OrderFormManager;
 import com.logo.eshow.service.ProductManager;
 import com.logo.eshow.service.ProductCategoryManager;
 import com.logo.eshow.util.DateUtil;
@@ -21,35 +24,40 @@ import org.apache.struts2.dispatcher.ServletRedirectResult;
 		@Result(name = "input", value = "add"),
 		@Result(name = "list", type = ServletRedirectResult.class, value = ""),
 		@Result(name = "success", type = ServletRedirectResult.class, value = "view/${id}"),
+		@Result(name = "ordersubmit", type = ServletRedirectResult.class, value = "ok.jsp"),
 		@Result(name = "redirect", type = ServletRedirectResult.class, value = "${redirect}") })
+
 public class OrderAction extends BaseFileUploadAction {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	private ProductManager productManager;
+	private OrderFormManager orderFormManager;
 	private ProductCategoryManager productCategoryManager;
+	private List<OrderForm> orderForms;
+	private OrderForm orderForm;
 	private List<Product> products;
 	private Product product;
-	private ProductQueryBean queryBean;
+	private OrderFormQueryBean queryBean;
 	private Integer productCategoryId;
 	
 	public String list() {
-		products = productManager.list(queryBean);
+		orderForms = orderFormManager.list(queryBean);
 		return LIST;
 	}
 	
 	public String category() {
-		Page<Product> page = productManager
+		Page<OrderForm> page = orderFormManager
 				.search(queryBean, getOffset(), pagesize);
-		products = page.getDataList();
+		orderForms = page.getDataList();
 		saveRequest("page", PageUtil.conversion(page));
 		return LIST;
 	}
 	
 	public String search() {
-		Page<Product> page = productManager.search(queryBean, getOffset(), pagesize);
-		products = page.getDataList();
+		Page<OrderForm> page = orderFormManager.search(queryBean, getOffset(), pagesize);
+		orderForms = page.getDataList();
 		saveRequest("page", PageUtil.conversion(page));
 		return LIST;
 	}
@@ -60,9 +68,28 @@ public class OrderAction extends BaseFileUploadAction {
 		return LIST;
 	}
 
-	public String view() {
+	public String prepareAddOrder() {
 		if (id != null) {
 			product = productManager.get(id);
+		} else {
+			return INDEX;
+
+		}
+		return NONE;
+	}
+	
+	public String view() {
+		if(true){
+			if (id != null) {
+				product = productManager.get(id);
+			} else {
+				return INDEX;
+
+			}
+			return NONE;
+		}
+		if (id != null) {
+			orderForm = orderFormManager.get(id);
 		} else {
 			return INDEX;
 
@@ -93,12 +120,12 @@ public class OrderAction extends BaseFileUploadAction {
 	}
 
 	public String save() throws Exception {
-//		product.setAddTime(new Date());
-//		if (productCategoryId != null) {
-//			product.setProductCategory(productCategoryManager.get(productCategoryId));
-//		}
-//		product.setUser(getSessionUser());
-//		product = productManager.save(product);
+		orderForm.setAddTime(new Date());
+		
+		orderForm.setUser(getSessionUser());
+		orderForm.setRealamount(11);
+		orderForm.setOrderamount(11);
+		orderForm = orderFormManager.save(orderForm);
 //		if (file != null) {
 //			String path = "upload/product/"
 //					+ DateUtil.getDateTime("yyyyMMdd", product.getAddTime())
@@ -111,9 +138,34 @@ public class OrderAction extends BaseFileUploadAction {
 //			productManager.save(product);
 //		}
 //		
-//		saveMessage("添加成功");
-//		id = product.getId();
-		return SUCCESS;
+		saveMessage("添加成功");
+		id = orderForm.getId();
+		//return SUCCESS;
+		return "ordersubmit";
+	}
+
+	public OrderFormManager getOrderFormManager() {
+		return orderFormManager;
+	}
+
+	public void setOrderFormManager(OrderFormManager orderFormManager) {
+		this.orderFormManager = orderFormManager;
+	}
+
+	public List<OrderForm> getOrderForms() {
+		return orderForms;
+	}
+
+	public void setOrderForms(List<OrderForm> orderForms) {
+		this.orderForms = orderForms;
+	}
+
+	public OrderForm getOrderForm() {
+		return orderForm;
+	}
+
+	public void setOrderForm(OrderForm orderForm) {
+		this.orderForm = orderForm;
 	}
 
 	public ProductManager getProductManager() {
@@ -152,11 +204,11 @@ public class OrderAction extends BaseFileUploadAction {
 		this.product = product;
 	}
 
-	public ProductQueryBean getQueryBean() {
+	public OrderFormQueryBean getQueryBean() {
 		return queryBean;
 	}
 
-	public void setQueryBean(ProductQueryBean queryBean) {
+	public void setQueryBean(OrderFormQueryBean queryBean) {
 		this.queryBean = queryBean;
 	}
 
