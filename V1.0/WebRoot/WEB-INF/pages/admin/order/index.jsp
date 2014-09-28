@@ -85,7 +85,7 @@
 											
 										</div>
 										<div class="tips">
-											<a href="<c:url value='/admin/order/edit/${id }'/>">修改</a>
+											<a href="<c:url value='/admin/order/edit/${id }'/>">订单处理</a>
 											&nbsp;&nbsp;|&nbsp;&nbsp;
 											<a href="javascript:void(0);"
 												onclick="return deleteData('order',${id});">删除</a>
