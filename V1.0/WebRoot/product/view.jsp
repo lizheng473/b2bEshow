@@ -93,7 +93,7 @@
 							
 								<input type="submit" class="botton" value="购买"/>
 								
-								<a	href="<c:url value='/order/view/${view.product.id}'/>"> 购买</a>
+								<a	href="<c:url value='/order/prepareAddOrder/${view.product.id}'/>"> 购买</a>
 								
 							</p>
 					
