@@ -79,17 +79,18 @@ public class OrderAction extends BaseFileUploadAction {
 	}
 	
 	public String view() {
-		if(true){
-			if (id != null) {
-				product = productManager.get(id);
-			} else {
-				return INDEX;
-
-			}
-			return NONE;
-		}
+//		if(true){
+//			if (id != null) {
+//				product = productManager.get(id);
+//			} else {
+//				return INDEX;
+//
+//			}
+//			return NONE;
+//		}
 		if (id != null) {
 			orderForm = orderFormManager.get(id);
+			product = productManager.get(orderForm.getProductId());
 		} else {
 			return INDEX;
 

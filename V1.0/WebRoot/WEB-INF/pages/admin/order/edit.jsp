@@ -36,7 +36,7 @@
 						<ul>
 							<li class="on">
 								<span class="txt6"><a
-									href="<c:url value='/admin/product'/>">产品列表</a> </span>
+									href="<c:url value='/admin/product'/>">订单处理</a> </span>
 							</li>
 							<li>
 								<span class="txt6"><a
@@ -56,7 +56,7 @@
 								 <input name="product.name" style="width: 300px;" maxlength="50"
 										type="text" onblur="this.className='inputtext'" 
 										class="inputtext text-input validate['required']" 
-										value="${view.orderForm.name}" />
+										value="${view.product.name}" />
 							</p>
 							<p>
 								<span class="l">产品分类:&nbsp;&nbsp;</span>
@@ -79,7 +79,7 @@
 								 <input name="product.material" style="width: 300px;" maxlength="50"
 										type="text" onblur="this.className='inputtext'" 
 										class="inputtext text-input validate['required']" 
-										value="${view.orderForm.material}" />
+										value="${view.product.material}" />
 							</p>
 							<p>
 								<span class="l">产品产地:&nbsp;</span>
@@ -88,34 +88,75 @@
 										class="inputtext text-input validate['required']" 
 										value="${view.product.origin}" />
 							</p>
+							
 							<p>
-								<span class="l">产品尺寸:&nbsp;</span>
-								 <input name="product.size" style="width: 300px;" maxlength="50"
+								<span class="l">订单产品规格:&nbsp;</span>
+								 <input name="rderForm.ordersize" style="width: 300px;" maxlength="50"
 										type="text" onblur="this.className='inputtext'" 
 										class="inputtext text-input validate['required']" 
-										value="${view.product.size}" />
-							</p>
-							
-							
-							
-							<p>
-								<span class="l">选择图片:&nbsp;</span>
-								<span class="1"> <input type="file" name="file"
-										size="38" class="inputtext text-input validate['required']" /> </span>
+										value="${view.orderForm.ordersize}" />
 							</p>
 							<p>
-								<span class="l">产品内容:&nbsp;</span>
-								<span class="r">&nbsp;
-									<script type="text/javascript">
-								    KE.show({
-								        id : 'ke-text'
-								    });
-								 </script>
-								<textarea id="ke-text" name="product.content"
-									style="width: 600px; height: 300px;">${view.product.content}</textarea> </span>
+								<span class="l">订单购买数量:&nbsp;</span>
+								 <input name="porderForm.orderquality" style="width: 300px;" maxlength="50"
+										type="text" onblur="this.className='inputtext'" 
+										class="inputtext text-input validate['required']" 
+										value="${view.orderForm.orderquality}" />
 							</p>
+								<p>
+								<span class="l">订单金额:&nbsp;</span>
+								 <input name="orderForm.realamount" style="width: 300px;" maxlength="50"
+										type="text" onblur="this.className='inputtext'" 
+										class="inputtext text-input validate['required']" 
+										value="${view.orderForm.realamount}" />
+							</p>
+							<p>
+								<span class="l">收货人名称:&nbsp;</span>
+								 <input name="orderForm.customername" style="width: 300px;" maxlength="50"
+										type="text" onblur="this.className='inputtext'" 
+										class="inputtext text-input validate['required']" 
+										value="${view.orderForm.customername}" />
+							</p>
+							<p>
+								<span class="l">收货人电话:&nbsp;</span>
+								 <input name="orderForm.customertel" style="width: 300px;" maxlength="50"
+										type="text" onblur="this.className='inputtext'" 
+										class="inputtext text-input validate['required']" 
+										value="${view.orderForm.customertel}" />
+							</p>
+							<p>
+								<span class="l">收货人电话:&nbsp;</span>
+								 <input name="orderForm.customeraddress" style="width: 300px;" maxlength="50"
+										type="text" onblur="this.className='inputtext'" 
+										class="inputtext text-input validate['required']" 
+										value="${view.orderForm.customeraddress}" />
+							</p>
+							<p>
+								<span class="l">订单状态:&nbsp;</span>
+								 <input name="{view.orderForm.status" style="width: 300px;" maxlength="50"
+										type="text" onblur="this.className='inputtext'" 
+										class="inputtext text-input validate['required']" 
+										value="${view.orderForm.status}" />
+							</p>
+							
+<!-- 							<p> -->
+<!-- 								<span class="l">选择图片:&nbsp;</span> -->
+<!-- 								<span class="1"> <input type="file" name="file" -->
+<!-- 										size="38" class="inputtext text-input validate['required']" /> </span> -->
+<!-- 							</p> -->
+<!-- 							<p> -->
+<!-- 								<span class="l">产品内容:&nbsp;</span> -->
+<!-- 								<span class="r">&nbsp; -->
+<!-- 									<script type="text/javascript"> -->
+<!-- 								    KE.show({ -->
+<!-- 								        id : 'ke-text' -->
+<!-- 								    }); -->
+<!-- 								 </script> -->
+<!-- 								<textarea id="ke-text" name="product.content" -->
+<!-- 									style="width: 600px; height: 300px;">${view.product.content}</textarea> </span> -->
+<!-- 							</p> -->
 							<p align="center">
-								<input type="submit" class="botton" value="修改"
+								<input type="submit" class="botton" value="提交车间生产"
 									onmouseout="this.className='botton';"
 									onmouseover="this.className='botton2';"/>
 								<input type="button" class="botton_close1" value="取消"
