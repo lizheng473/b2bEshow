@@ -129,7 +129,7 @@
 									
 										/> </span>
 							</p>
-
+							<input type="hidden" name="orderForm.productId" value="${view.product.id}" />
 							<p>
 								<span class="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 								<input type="submit" class="botton" value="提交订单"/>
