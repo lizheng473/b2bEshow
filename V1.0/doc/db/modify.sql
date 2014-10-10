@@ -29,3 +29,18 @@ productimg VARCHAR(100),
 sequence INT(11),
 productCategoryId INT(11),
 PRIMARY KEY (id) );
+
+--20141010增加车间表
+--drop table  workshop ;
+CREATE TABLE workshop
+( 
+    id INT(11) NOT NULL AUTO_INCREMENT COMMENT '车间ID',
+    workshopname varchar(100)  COMMENT '车间名称', 
+    workshopmanagerid varchar(100)  COMMENT '车间主任ID',
+    workshopmanagername varchar(100) COMMENT '车间主任名称', 
+    workshoptel varchar(100) COMMENT '车间电话', 
+    valid varchar(100) COMMENT '车间有效标志位', 
+    remark varchar(100) COMMENT '车间备注',
+    PRIMARY KEY  (id)
+)
+  

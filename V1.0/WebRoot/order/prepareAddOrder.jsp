@@ -2,7 +2,7 @@
 	contentType="text/html;charset=utf-8"%>
 <%@ include file="/common/taglibs.jsp"%>
 <%@ taglib uri="/WEB-INF/stringutil.tld" prefix="util"%>
-<s:action name="order!view" id="view" executeResult="false"></s:action>
+<s:action name="order!prepareAddOrder" id="view" executeResult="false"></s:action>
 <c:set var="myid">
 	<authz:authentication operation='id' />
 </c:set>
