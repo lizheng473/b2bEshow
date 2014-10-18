@@ -1,28 +1,25 @@
 package com.logo.eshow.webapp.action;
 
-import com.logo.eshow.bean.query.OrderFormQueryBean;
-import com.logo.eshow.bean.query.WorkShopQueryBean;
-import com.logo.eshow.common.page.Page;
-import com.logo.eshow.model.Blog;
-import com.logo.eshow.model.OrderForm;
-import com.logo.eshow.model.User;
-import com.logo.eshow.model.WorkShop;
-import com.logo.eshow.model.Product;
-import com.logo.eshow.service.OrderFormManager;
-import com.logo.eshow.service.UserService;
-import com.logo.eshow.service.WorkShopManager;
-import com.logo.eshow.service.ProductManager;
-import com.logo.eshow.service.ProductCategoryManager;
-import com.logo.eshow.util.DateUtil;
-import com.logo.eshow.util.ImageUtil;
-import com.logo.eshow.util.PageUtil;
-
-import java.util.Date;
 import java.util.List;
 
 import org.apache.struts2.config.Result;
 import org.apache.struts2.config.Results;
 import org.apache.struts2.dispatcher.ServletRedirectResult;
+
+import com.logo.eshow.bean.query.OrderFormQueryBean;
+import com.logo.eshow.bean.query.WorkShopQueryBean;
+import com.logo.eshow.common.page.Page;
+import com.logo.eshow.model.OrderForm;
+import com.logo.eshow.model.Product;
+import com.logo.eshow.model.User;
+import com.logo.eshow.model.WorkShop;
+import com.logo.eshow.service.OrderFormManager;
+import com.logo.eshow.service.ProductCategoryManager;
+import com.logo.eshow.service.ProductManager;
+import com.logo.eshow.service.UserManager;
+import com.logo.eshow.service.UserService;
+import com.logo.eshow.service.WorkShopManager;
+import com.logo.eshow.util.PageUtil;
 
 @Results( {
 		@Result(name = "input", value = "add"),
@@ -52,7 +49,7 @@ public class WorkShopAction extends BaseFileUploadAction {
 	private WorkShopManager workShopManager;
 	private Integer workShopid;
 	
-	private UserService userService;
+	private UserManager userManager;
 	
 	public String list() {
 		workShops = workShopManager.list(workShopQueryBean);
@@ -98,7 +95,7 @@ public class WorkShopAction extends BaseFileUploadAction {
 		old.setName(workShop.getName());
 		old.setManagername(workShop.getManagername());
 		
-		User user=userService.getUserByUsername(workShop.getManagername());
+		User user=userManager.getUserByUsername(workShop.getManagername());
 		if(user!=null){
 			workShop.setManagerid(user.getId());
 		}
@@ -109,13 +106,13 @@ public class WorkShopAction extends BaseFileUploadAction {
 		
 		workShopManager.save(old);
 		saveMessage("修改成功");
-		return SUCCESS;
+		return LIST;
 	}
 
 	public String save() throws Exception {
 		
 		workShop.setValid("1");
-		User user=userService.getUserByUsername(workShop.getManagername());
+		User user=userManager.getUserByUsername(workShop.getManagername());
 		if(user!=null){
 			workShop.setManagerid(user.getId());
 		}
@@ -239,16 +236,13 @@ public class WorkShopAction extends BaseFileUploadAction {
 		this.workShopid = workShopid;
 	}
 
-
-
-	public UserService getUserService() {
-		return userService;
+	public UserManager getUserManager() {
+		return userManager;
 	}
 
-
-
-	public void setUserService(UserService userService) {
-		this.userService = userService;
+	public void setUserManager(UserManager userManager) {
+		this.userManager = userManager;
 	}
+	
 	
 }

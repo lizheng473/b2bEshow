@@ -64,7 +64,7 @@
 										<span class="r setting"><a
 											href="<c:url value='/admin/workshop/edit/${id}'/>">修改</a> </span>
 										<span class="r del"> <a href="javascript:void(0);"
-											onclick="return deleteData('workshop',${id});">删除</a> </span>
+											onclick="return deleteData('workShop',${id});">删除</a> </span>
 									</li>
 								</s:iterator>
 							</ul>

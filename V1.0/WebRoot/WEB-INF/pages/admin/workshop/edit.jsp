@@ -44,7 +44,7 @@
 					<div id="productEdit">
 						<s:form id="productForm" action="workShop!update.html"
 							method="post" enctype="multipart/form-data">
-							<s:hidden name="id" value="%{#view.orderForm.id}"></s:hidden>
+							<s:hidden name="id" value="%{#view.workShop.id}"></s:hidden>
 							<p>
 								<span class="l">车间名称:&nbsp;</span>
 								 <input name="workShop.name" style="width: 300px;" maxlength="50"
