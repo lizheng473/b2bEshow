@@ -1,18 +1,5 @@
 package com.logo.eshow.webapp.action;
 
-import com.logo.eshow.bean.query.OrderFormQueryBean;
-import com.logo.eshow.bean.query.ProductQueryBean;
-import com.logo.eshow.common.page.Page;
-import com.logo.eshow.model.Blog;
-import com.logo.eshow.model.OrderForm;
-import com.logo.eshow.model.Product;
-import com.logo.eshow.service.OrderFormManager;
-import com.logo.eshow.service.ProductManager;
-import com.logo.eshow.service.ProductCategoryManager;
-import com.logo.eshow.util.DateUtil;
-import com.logo.eshow.util.ImageUtil;
-import com.logo.eshow.util.PageUtil;
-
 import java.util.Date;
 import java.util.List;
 
@@ -20,10 +7,22 @@ import org.apache.struts2.config.Result;
 import org.apache.struts2.config.Results;
 import org.apache.struts2.dispatcher.ServletRedirectResult;
 
+import com.logo.eshow.bean.query.OrderFormQueryBean;
+import com.logo.eshow.common.page.Page;
+import com.logo.eshow.model.OrderForm;
+import com.logo.eshow.model.Product;
+import com.logo.eshow.model.ProductionTask;
+import com.logo.eshow.service.OrderFormManager;
+import com.logo.eshow.service.ProductCategoryManager;
+import com.logo.eshow.service.ProductManager;
+import com.logo.eshow.service.ProductionTaskManager;
+import com.logo.eshow.util.PageUtil;
+
 @Results( {
 		@Result(name = "input", value = "add"),
 		@Result(name = "list", type = ServletRedirectResult.class, value = ""),
 		@Result(name = "success", type = ServletRedirectResult.class, value = "view/${id}"),
+		@Result(name = "edit", type = ServletRedirectResult.class, value = "edit/${id}"),
 		@Result(name = "ordersubmit", type = ServletRedirectResult.class, value = "ok.jsp"),
 		@Result(name = "redirect", type = ServletRedirectResult.class, value = "${redirect}") })
 
@@ -35,7 +34,11 @@ public class OrderAction extends BaseFileUploadAction {
 	private ProductManager productManager;
 	private OrderFormManager orderFormManager;
 	private ProductCategoryManager productCategoryManager;
+	private ProductionTaskManager productionTaskManager;
+	
 	private List<OrderForm> orderForms;
+	private ProductionTask productionTask;
+	private List<ProductionTask> productionTasks;
 	private OrderForm orderForm;
 	private List<Product> products;
 	private Product product;
@@ -99,25 +102,28 @@ public class OrderAction extends BaseFileUploadAction {
 	}
 	
 	public String update() throws Exception {
-		Product old = productManager.get(id);
-		old.setName(product.getName());
-		old.setContent(product.getContent());
-		if(productCategoryId != null){
-			old.setProductCategory(productCategoryManager.get(productCategoryId));
+		
+		OrderForm orderFormold = orderFormManager.get(id);
+		
+		orderFormold.setStatus(orderForm.getStatus());
+		orderFormManager.save(orderFormold);
+		
+		if("3".equals(orderForm.getStatus())){//如果是派送生产车间，则在车间任务表插入数据
+			ProductionTask productionTask = new ProductionTask();
+			
+			productionTask.setOrderfromid(orderFormold.getId());
+			productionTask.setWorkshopid(1);
+			productionTask.setAddTime(new Date());
+			productionTask.setOperateuserid(String.valueOf(this.getSessionUser().getId()));
+			productionTask.setOperateusername(this.getSessionUser().getUsername());
+			productionTask.setStatus("1");
+			productionTask.setValid("1");
+			
+			productionTaskManager.save(productionTask);
 		}
 		
-		if (file != null) {
-			String path = "upload/product/"
-					+ DateUtil.getDateTime("yyyyMMdd", old.getAddTime()) + "/";
-			String fileName = old.getId() + ".jpg";
-			ImageUtil.uploadImage(path, fileName, file, 200, 150, "zoom");
-			old.setImg(fileName);
-			ImageUtil.resizeImage(path + "view/", path + "orig/", fileName,
-					600, 600, "zoom");
-		}
-		productManager.save(old);
 		saveMessage("修改成功");
-		return SUCCESS;
+		return "edit";
 	}
 
 	public String save() throws Exception {
@@ -216,4 +222,30 @@ public class OrderAction extends BaseFileUploadAction {
 	public ProductCategoryManager getProductCategoryManager() {
 		return productCategoryManager;
 	}
+
+	public ProductionTaskManager getProductionTaskManager() {
+		return productionTaskManager;
+	}
+
+	public void setProductionTaskManager(ProductionTaskManager productionTaskManager) {
+		this.productionTaskManager = productionTaskManager;
+	}
+
+	public ProductionTask getProductionTask() {
+		return productionTask;
+	}
+
+	public void setProductionTask(ProductionTask productionTask) {
+		this.productionTask = productionTask;
+	}
+
+	public List<ProductionTask> getProductionTasks() {
+		return productionTasks;
+	}
+
+	public void setProductionTasks(List<ProductionTask> productionTasks) {
+		this.productionTasks = productionTasks;
+	}
+	
+	
 }

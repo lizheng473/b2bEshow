@@ -13,6 +13,18 @@
 		<meta name="keywords" content="${view.product.name}" />
 		<meta name="description" content="${view.product.name}" />
 	</head>
+	
+	<style>
+
+  .spcs
+{
+  color:red;
+  font:12px;
+  WIDTH: 700px;
+  BORDER: #ddd 1px solid;
+  PADDING-BOTTOM: 40px; PADDING-LEFT: 14px; PADDING-RIGHT: 14px; PADDING-TOP: 11px
+}
+</style>
 	<body>
 		<div id="content">
 			<div id="postpath">
@@ -24,15 +36,15 @@
 			</div>
 
 			<!-- .post -->
-			<s:form action="order!view" method="post" cssClass="creat_form clearfix">
-			<div>
+			<s:form action="/order/prepareAddOrder" method="post" cssClass="creat_form clearfix">
+			<div id="post-80" class="entry-content">
 				<input type="hidden" name="id" value="${view.product.id}" /> <br />
 				<table>
 				<tr>
 					<td>
 							<img
 								src="${pageContext.request.contextPath}/upload/product/<s:date name='%{#view.product.addTime}' format='yyyyMMdd' />/view/${view.product.img}"
-								width="200" height="200" />
+								width="350" height="300" />
 					</td>
 					
 				<td>
@@ -93,7 +105,7 @@
 							
 								<input type="submit" class="botton" value="购买"/>
 								
-								<a	href="<c:url value='/order/prepareAddOrder/${view.product.id}'/>"> 购买</a>
+<!-- 								<a	href="<c:url value='/order/prepareAddOrder/${view.product.id}'/>"> 购买</a> -->
 								
 							</p>
 					
@@ -107,7 +119,7 @@
 				<tr>
 					<td colspan=2>
 					
-					<div class="contxt">规格参数</div>
+					<div class="spcs">规格参数</div>
 					</td>
 				</tr>
 					<tr>

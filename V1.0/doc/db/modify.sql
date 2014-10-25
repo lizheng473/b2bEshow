@@ -45,3 +45,21 @@ CREATE TABLE workshop
     remark varchar(100) COMMENT '车间备注',
     PRIMARY KEY  (id)
 )ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+
+--20141010增加生产任务表
+drop table  productionTask ;
+CREATE TABLE productionTask
+( 
+    id INT(11) NOT NULL AUTO_INCREMENT COMMENT '任务ID',
+    orderfromid int(11) NOT NULL, 
+    workshopid int(11) not null,
+    status   char(1) ,--生产任务状态
+    addTime DATETIME,  --插入时间
+    endTime DATETIME,  --完成时间
+    operateuserid   varchar(50),    --操作员
+    operateusername   varchar(50),
+    comcode varchar(50),
+    valid varchar(100) ,  -- '生产任务有效标志位', 
+    remark varchar(100) , -- '生产任务备注',
+    PRIMARY KEY  (id)
+)ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;

@@ -48,7 +48,7 @@
 						</ul>
 					</div>
 					<div id="productEdit">
-						<s:form id="productForm" action="product!update.html"
+						<s:form id="orderForm" action="order!update.html"
 							method="post" enctype="multipart/form-data">
 							<s:hidden name="id" value="%{#view.orderForm.id}"></s:hidden>
 							<p>
@@ -131,12 +131,28 @@
 										class="inputtext text-input validate['required']" 
 										value="${view.orderForm.customeraddress}" />
 							</p>
+<!-- 							<p> -->
+<!-- 								<span class="l">订单状态:&nbsp;</span> -->
+<!-- 								 <input name="{view.orderForm.status}" style="width: 300px;" maxlength="50" -->
+<!-- 										type="text" onblur="this.className='inputtext'"  -->
+<!-- 										class="inputtext text-input validate['required']"  -->
+<!-- 										value="${view.orderForm.status}" /> -->
+<!-- 							</p> -->
+							
 							<p>
-								<span class="l">订单状态:&nbsp;</span>
-								 <input name="{view.orderForm.status" style="width: 300px;" maxlength="50"
-										type="text" onblur="this.className='inputtext'" 
-										class="inputtext text-input validate['required']" 
-										value="${view.orderForm.status}" />
+								<span class="l" style="color: red;">处理订单状态:&nbsp;</span>
+								<span class="r">&nbsp; 
+										<select name="orderForm.status" value="${view.orderForm.status}">
+									
+											<option value="0">未确认</option>
+											<option value="1">已完成</option>
+											<option value="2">已确认</option>
+											<option value="3">派送生产车间</option>
+											<option value="4">车间已接收</option>
+											<option value="5">车间生产完毕</option>
+											<option value="6">配送物流</option>
+										</select> 
+								</span>
 							</p>
 							
 <!-- 							<p> -->
@@ -156,7 +172,7 @@
 <!-- 									style="width: 600px; height: 300px;">${view.product.content}</textarea> </span> -->
 <!-- 							</p> -->
 							<p align="center">
-								<input type="submit" class="botton" value="提交车间生产"
+								<input type="submit" class="botton" value="提交"
 									onmouseout="this.className='botton';"
 									onmouseover="this.className='botton2';"/>
 								<input type="button" class="botton_close1" value="取消"

@@ -61,7 +61,7 @@
 <!-- 													width="50" height="50" /> </a> -->
 <!-- 										</c:if> -->
 										<a href="<c:url value='product/view/${id}'/>"><img
-													src="${pageContext.request.contextPath}/upload/product/<s:date name='%{addTime}' format='yyyyMMdd' />/${img}"
+													src="${pageContext.request.contextPath}/upload/product/<s:date name='%{addTime}' format='yyyyMMdd' />/view/${img}"
 													width="50" height="50" /> </a>
 										</div>
 <!-- 										<div class="name"> -->

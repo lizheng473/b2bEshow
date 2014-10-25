@@ -95,6 +95,11 @@
     <bean id="workShopDao" class="com.logo.eshow.dao.hibernate.WorkShopDaoHibernate">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
+    
+    <bean id="productionTaskDao" class="com.logo.eshow.dao.hibernate.ProductionTaskDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
     <!-- Add new DAOs here -->
     
     <bean id="albumManager" class="com.logo.eshow.service.impl.AlbumManagerImpl">
@@ -187,6 +192,9 @@
     </bean>
     <bean id="workShopManager" class="com.logo.eshow.service.impl.WorkShopManagerImpl">
         <constructor-arg ref="workShopDao"/>
+    </bean>
+     <bean id="productionTaskManager" class="com.logo.eshow.service.impl.ProductionTaskManagerImpl">
+        <constructor-arg ref="productionTaskDao"/>
     </bean>
     
     <!-- Add new Actions here -->

@@ -36,6 +36,11 @@
 				<img src="<c:url value='/admin/images/app_list_info.gif'/>">
 				<a href="<c:url value='/admin/workshop'/>">生产车间维护</a>
 			</li>
+			
+			<li>
+				<img src="<c:url value='/admin/images/app_list_info.gif'/>">
+				<a href="<c:url value='/admin/productionTask'/>">生产任务处理</a>
+			</li>
 		</ul>
 		<div class="appPix"></div>
 		<div class="appAdd">
